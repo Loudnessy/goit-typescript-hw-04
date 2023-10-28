@@ -1,5 +1,13 @@
+import { type } from "os";
 import React, {useReducer} from "react";
-
+type State = {
+  isRequestInProgress: boolean,
+  requestStep: string
+}
+type Action = {
+  type: string
+  payload?: any;
+}
 const initialState: State = {
   isRequestInProgress: false,
   requestStep: 'idle',
